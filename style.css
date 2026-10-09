@@ -3484,3 +3484,15 @@ main > section:not(.hero-section) + section { margin-top: var(--gap); }
   .xp-flow-title { font-size: 1.05rem; }
 }
 @media (prefers-reduced-motion: reduce) { .xp-pipe-wrap, .xp-pipe, .xp-pipe-step { transition: none; } }
+
+/* Certifications: issuing platform */
+.cert-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.cert-org { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; font-family: var(--font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .02em; color: var(--teal-accent-dark); padding: 4px 10px; border-radius: 99px; border: 1px solid var(--teal-border); background: var(--teal-soft-wash); transition: background .3s ease, border-color .3s ease; }
+.cert-org svg { flex: none; opacity: .85; }
+.cert-item:hover .cert-org { border-color: var(--teal-border-hover); background: rgba(245,183,159,.24); }
+/* Certifications: platform tag inline with the title */
+.cert-body { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 12px; row-gap: 6px; }
+.cert-org { align-self: center; }
+.cert-body { display: block; line-height: 1.5; }
+.cert-body .cert-name { display: inline; margin-right: 10px; }
+.cert-body .cert-org { display: inline-flex; vertical-align: middle; line-height: 1.2; margin-top: -3px; white-space: nowrap; }
